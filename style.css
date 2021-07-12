@@ -17,7 +17,7 @@ body {
 h2 {
     text-transform: uppercase;
     font-size: 40px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 }
 
 p {
@@ -221,17 +221,24 @@ h1 span {
 .texte-intro {
     position: absolute;
     z-index: 2;
-    width: 841px;
+    /* width: 841px; */
+    width: 65%;
     height: 916px;
     margin: 90px auto;
     display: flex;
     flex-direction: column;
-    gap: 140px;
+    /* gap: 140px; */
+    gap: 90px;
 }
 
 .texte-intro .border {
-    border: #f1f1f1 solid 20px;
+    border: #f1f1f1 dashed 20px;
     padding: 50px 70px;
+}
+
+.texte-intro .border-bis {
+    border: #f1f1f1 solid 20px;
+    padding: 50px;
 }
 
 .texte-intro .border .grid {
@@ -306,7 +313,7 @@ h1 span {
 /* <!----------------------- La Hackeuse -----------------------> */
 
 .la-hackeuse {
-    border: 4px dashed #f1f1f1;
+    /* border: 4px dashed #f1f1f1; */
 
     grid-area: p1;
     /* position: absolute;
@@ -359,7 +366,7 @@ h1 span {
 /* ------------------- Fascinante ------------------- */
 
 .fascinante {
-    border: 4px dashed #f1f1f1;
+    /* border: 4px dashed #f1f1f1; */
 
     grid-area: p2;
     /* margin: 60px 170px 0; */
@@ -391,7 +398,7 @@ h1 span {
 /* ------------------- CONCLUSION ------------------- */
 
 .conclusion {
-    border: 4px dashed #f1f1f1;
+    /* border: 4px dashed #f1f1f1; */
 
     grid-area: p3;
     /* margin: 60px 170px 0; */

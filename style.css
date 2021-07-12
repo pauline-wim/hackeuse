@@ -280,7 +280,7 @@ h1 span {
 
 /* <!----------------------- fin - INTRODUCTION -----------------------> */
 
-/* <!----------------------- La Hackeuse -----------------------> */
+/* <!----------------------- Container -----------------------> */
 
 #lisbeth {
     width: 98vw;
@@ -288,24 +288,30 @@ h1 span {
     margin: auto;
 }
 
-.container {
+.background-content {
     position: relative;
     height: 2696px;
     background: url(images/Background-content.png) no-repeat top/cover;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: "p1" "p2" "p3";
-    gap: 20px;
-    /* align-items:flex-start; */
-    /* justify-content: space-around; */
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+    gap: 140px;
+}
+
+/* <!----------------------- La Hackeuse -----------------------> */
+
 .la-hackeuse {
+    border: 4px dashed #f1f1f1;
+
     grid-area: p1;
     /* position: absolute;
     z-index: 2; */
-    margin: 80px 170px 0;
+    margin-top: 80px;
     padding: 40px 60px 0;
     display: grid;
     grid-template-columns: 1fr 65px 1fr;
@@ -353,9 +359,11 @@ h1 span {
 /* ------------------- Fascinante ------------------- */
 
 .fascinante {
+    border: 4px dashed #f1f1f1;
+
     grid-area: p2;
-    margin: 60px 170px 0;
-    padding: 40px 60px 0;
+    /* margin: 60px 170px 0; */
+    padding: 0 60px 0;
     display: grid;
     grid-template-columns: 1fr 1fr 30px auto;
     grid-template-rows: auto 1fr;
@@ -365,23 +373,28 @@ h1 span {
 
 .fascinante .aa {
     grid-area: fa;
+    padding-top: 40px;
 }
 
 .fascinante .bb {
     grid-area: fb;
+    padding-bottom: 40px;
 }
 
 .fascinante .cc {
     grid-area: fc;
+    align-self: center;
 }
 
-/* CONCLUSION */
+/* ------------------- Fascinante ------------------- */
+
+/* ------------------- CONCLUSION ------------------- */
 
 .conclusion {
     border: 4px dashed #f1f1f1;
 
     grid-area: p3;
-    margin: 60px 170px 0;
+    /* margin: 60px 170px 0; */
     padding: 0 60px 0;
     display: grid;
     grid-template-columns: 1fr 65px 1fr;
@@ -408,7 +421,11 @@ h1 span {
     grid-area: cc;
 }
 
-/* FOOTER */
+/* ------------------- fin - CONCLUSION ------------------- */
+
+/* <!----------------------- fin - Container -----------------------> */
+
+/* ----------------------- FOOTER ----------------------- */
 
 footer {
     position: relative;
@@ -416,6 +433,8 @@ footer {
     display: flex;
     justify-content: center;
 }
+
+/* ----------------------- fin - FOOTER ----------------------- */
 
 
 

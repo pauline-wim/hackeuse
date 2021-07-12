@@ -12,16 +12,18 @@ body {
     background: #000615;
     font-family: 'Oxanium', sans-serif;
     color: #f1f1f1;
+    overflow-x: hidden;
+
 }
 
 h2 {
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: clamp(20px, 3vw, 40px);
     padding-bottom: 40px;
 }
 
 p {
-    font-size: 20px;
+    font-size: clamp(16px, 2vw, 20px);
     line-height: 1.4;
 }
 
@@ -35,7 +37,7 @@ header {
     font-family: 'Press Start 2P', serif;
     height: 100vh;
     background: url(images/matrix-green.png) no-repeat center/cover;
-    position: relative;
+    /* position: relative; */
     opacity: 1;
     overflow-x: hidden;
 }
@@ -211,24 +213,20 @@ h1 span {
 /* <!----------------------- INTRODUCTION -----------------------> */
 
 .intro {
+    /* position: relative; */
     background: url(images/background-intro.png) no-repeat center/cover;
     display: flex;
     justify-content: center;
-    height: 1332px;
-    position: relative;
+    height: min-height(1332px, auto);
 }
 
 .texte-intro {
-    position: absolute;
-    z-index: 2;
     /* width: 841px; */
     width: 65%;
-    height: 916px;
-    margin: 90px auto;
+    height: min-height(916px, 90%);
+    margin: 90px auto 0;
     display: flex;
     flex-direction: column;
-    /* gap: 140px; */
-    gap: 90px;
 }
 
 .texte-intro .border {
@@ -241,7 +239,7 @@ h1 span {
     padding: 50px;
 }
 
-.texte-intro .border .grid {
+.texte-intro .border-bis .border .grid {
     display: grid;
     justify-content: center;
     grid-template-columns: 1fr auto;
@@ -249,35 +247,38 @@ h1 span {
     gap: 30px;
 }
 
-.texte-intro .border .grid .a {
+.texte-intro .border-bis .border .grid .a {
     grid-area: a;
 }
 
-.texte-intro .border .grid .b {
+.texte-intro .border-bis .border .grid .b {
     grid-area: b;
     background: url(images/gif/hackerman.gif) no-repeat center/cover;
     height: 195px;
     width: 281px;
 }
 
-.texte-intro .border .grid .c {
+.texte-intro .border-bis .border .grid .c {
     grid-area: c;
 }
 
-.texte-intro .border .grid img {
+.texte-intro .border-bis .border .grid img {
     display: none;
 }
 
-.intro h3 {
+.intro .texte-intro h3 {
+    /* position: relative;
+    z-index: 4; */
     font-family: 'Press Start 2P', serif;
-    font-size: 35px;
+    font-size: clamp(20px, 3vw, 35px);
+    margin: 50px;
     align-self: center;
     text-align: center;
     color: #f1f1f1;
     -webkit-text-stroke: #f1f1f1 0.5px;
 }
 
-.intro h3:hover {
+.intro .texte-intro h3:hover {
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
     background-image: url(images/glitch/white-glitch.gif);
@@ -290,7 +291,8 @@ h1 span {
 /* <!----------------------- Container -----------------------> */
 
 #lisbeth {
-    width: 98vw;
+    position: relative;
+    width: 100%;
     display: flex;
     margin: auto;
 }
@@ -313,7 +315,7 @@ h1 span {
 /* <!----------------------- La Hackeuse -----------------------> */
 
 .la-hackeuse {
-    /* border: 4px dashed #f1f1f1; */
+    border: 4px dashed #f1f1f1;
 
     grid-area: p1;
     /* position: absolute;
@@ -335,7 +337,7 @@ h1 span {
     grid-area: hb;
 }
 
-.la-hackeuse .c {
+.la-hackeuse .trinity {
     grid-area: hc;
     margin: 150px 0 0;
     width: 584px;
@@ -346,14 +348,14 @@ h1 span {
     grid-area: hd;
 } */
 
-.la-hackeuse .e {
+.la-hackeuse .eye {
     grid-area: he;
     height: 418px;
     width: 388px;
     align-self: center;
 }
 
-.d {
+.cube {
     position: absolute;
     width: 400px;
     z-index: 4;
@@ -366,7 +368,7 @@ h1 span {
 /* ------------------- Fascinante ------------------- */
 
 .fascinante {
-    /* border: 4px dashed #f1f1f1; */
+    border: 4px dashed #f1f1f1;
 
     grid-area: p2;
     /* margin: 60px 170px 0; */
@@ -398,7 +400,7 @@ h1 span {
 /* ------------------- CONCLUSION ------------------- */
 
 .conclusion {
-    /* border: 4px dashed #f1f1f1; */
+    border: 4px dashed #f1f1f1;
 
     grid-area: p3;
     /* margin: 60px 170px 0; */
@@ -413,14 +415,14 @@ h1 span {
     grid-area: ca;
 }
 
-.conclusion .bbb {
+.conclusion .riri {
     grid-area: cb;
     width: 430px;
     height: 430px;
     background: url(images/gif/riri.gif) no-repeat center/cover;
 }
 
-.conclusion .bbb img {
+.conclusion .riri img {
     display: none;
 }
 
@@ -443,7 +445,175 @@ footer {
 
 /* ----------------------- fin - FOOTER ----------------------- */
 
+@media (max-width: 1400px) {
+    .texte-intro {
+        margin: 80px auto 0;
+    }
 
+    .texte-intro .border {
+        border: #f1f1f1 dashed 15px;
+        padding: 40px 60px;
+    }
+    
+    .texte-intro .border-bis {
+        border: #f1f1f1 solid 15px;
+        padding: 40px;
+    }
 
+    .container {
+        gap: 60px;
+    }
 
+    .la-hackeuse {
+        padding: 30px 0 0;
+    }
 
+    .fascinante {
+        padding: 0;
+    }
+
+    .conclusion {
+        padding: 0;
+    }
+
+    .conclusion .riri {
+        margin: 30px;
+    }
+
+    .cube {
+        bottom: 58%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .fascinante .aa {
+        padding-bottom: 20px;
+    }
+
+    .fascinante .bb {
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    h2 {
+        padding-bottom: 20px;
+    }
+
+    .la-hackeuse .trinity {
+        margin: 100px 0 0;
+    }
+
+    .fascinante .aa {
+        padding-bottom: 0;
+    }
+
+    .conclusion .riri {
+        width: 360px;
+        height: 360px;
+    }
+
+    .texte-intro .border-bis .border .grid {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        grid-template-areas: "b" "a" "c";
+        gap: 20px;
+    }
+
+    .texte-intro .border-bis .border h2 {
+        text-align: center;
+    }
+
+    .texte-intro .border-bis .border .grid .b {
+        justify-self: center;
+        width: auto;
+        height: auto;
+    }
+
+    .texte-intro .border-bis .border .grid .b img {
+        display: block;
+    }
+}
+
+@media (max-width: 1100px) {
+    .texte-intro {
+        width: 80%;
+    }
+
+    .container {
+        width: 82%;
+        gap: 92px;
+    }
+
+    .cube {
+        width: 350px;
+        right: 5%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .texte-intro {
+        width: 90%;
+        margin: 40px auto 0;
+    }
+
+    .container {
+        width: 90%;
+        gap: 92px;
+    }
+
+    .cube {
+        width: 300px;
+        bottom: 60%;
+    }
+}
+
+@media (max-width: 960px) {
+    .la-hackeuse .eye {
+        max-height: 418px;
+        min-height: 268px;
+        max-width: 370px;
+        min-width: 293px;
+    }
+
+    .la-hackeuse .trinity {
+        max-width: 545px;
+        min-width: 360px;
+        max-height: 269px;
+        min-height: 212px;
+    }
+}
+
+@media (max-width: 930px) {
+    .la-hackeuse {
+        grid-template-columns: 1fr;
+        grid-template-areas: "ha" "hb" "he";
+        margin-top: 40px;
+    }
+
+    .la-hackeuse .eye {
+        /* justify-self: center; */
+        margin: 30px;
+    }
+
+    .la-hackeuse .trinity {
+        display: none;
+    }
+
+    .background-content {
+        height: auto;
+        background: none;
+    }
+
+    .cube {
+        right: 8%;
+        bottom: 62%;
+    }
+}
+
+@media (max-width: 930px) {
+    /* enlever une bordure de l'intro
+    mettre toute les div en colonne
+    changer la taille des gifs */
+}

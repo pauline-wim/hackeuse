@@ -18,7 +18,7 @@ body {
 
 h2 {
     text-transform: uppercase;
-    font-size: clamp(20px, 3vw, 40px);
+    font-size: clamp(30px, 3vw, 40px);
     padding-bottom: 40px;
 }
 
@@ -50,7 +50,7 @@ header {
 
 h1{
    text-transform: uppercase;
-   font-size: 60px;
+   font-size: clamp(50px, 8vw, 60px);
    color: #f1f1f1;
 }
 
@@ -206,6 +206,19 @@ h1 span {
 .top .gif4:hover {
     cursor: pointer;
     opacity: 1;
+}
+
+.hide {
+    display: none;
+}
+
+.mob {
+    display: none;
+}
+
+.min {
+    min-width: 100%;
+    overflow-x: hidden;
 }
 
 /* fin - HEADER */
@@ -612,8 +625,181 @@ footer {
     }
 }
 
-@media (max-width: 930px) {
+@media (max-width: 770px) {
+    .fascinante {
+        grid-template-columns: 1fr;
+        grid-template-areas: "fa" "fb" "fd";
+        gap: 20px;
+    }
+
+    .fascinante .aa {
+        padding-top: 0;
+    }
+
+    .fascinante .bb {
+        padding-bottom: 0;
+    }
+
+    .fascinante .cc {
+        display: none;
+    }
+
+    .hide {
+        grid-area: fd;
+        display: block;
+        justify-self: center;
+        margin: 30px;
+        min-width: 360px;
+    }
+
+    .conclusion {
+        grid-template-columns: 1fr;
+        grid-template-areas: "ca" "cc" "cb";
+    }
+
+    .conclusion .riri {
+        justify-self: center;
+    }
+
+    .texte-intro .border {
+        border: transparent;
+        padding: 0;
+    }
+
+    .cube {
+        right: 4%;
+    }
+
+    .top {
+        display: none;
+    }
+
+    .under {
+        min-width: 360px;
+        overflow-x: hidden;
+    }
+
     /* enlever une bordure de l'intro
     mettre toute les div en colonne
     changer la taille des gifs */
 }
+
+@media (max-width: 550px) {
+    .cube {
+        width: 200px;
+    }
+}
+
+@media (max-width: 500px) {
+    .titre-header {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    header {
+        height: auto;
+    }
+
+    header .lignes {
+        display: none;
+    }
+
+    .under {
+        height: auto;
+    }
+
+    .gifs {
+        width: auto;
+        height: auto;
+    }
+
+    .gifs .image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .background-matrix {
+        height: 360px;
+    }
+
+    .background-matrix ul {
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .cube {
+        display: none;
+    }
+
+    .intro .border-bis {
+        border: none;
+        padding: 0;
+    }
+
+    .intro .grid .b {
+        display: none;
+    }
+
+    .la-hackeuse {
+        padding: 0;
+    }
+
+    .la-hackeuse .eye {
+        width: 293px;
+        height: 268px;
+        justify-self: center;
+    }
+
+    .hide {
+        width: 100%;
+    }
+    
+    #lisbeth {
+        display: none;
+    }
+
+    .mob {
+        display: block;
+        width: 100%;
+    }
+
+    .eye {
+        display: none;
+    }
+
+    .riri {
+        display: none;
+    }
+
+    .container {
+        gap: 40px;
+    }
+
+    .padding {
+        padding-top: 20px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .cube-mobile {
+        position: absolute;
+        width: fit-content;
+        z-index: 4;
+        top: 2%;
+        right: 2%;
+    }
+
+    .cube-mobile img {
+        width: 60px;
+    }
+
+    /* Menu hamburger responsive */
+}
+

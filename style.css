@@ -31,6 +31,19 @@ ul {
     list-style: none;
 }
 
+.hide {
+    display: none;
+}
+
+.mob {
+    display: none;
+}
+
+.min {
+    min-width: 100%;
+    overflow-x: hidden;
+}
+
 /* HEADER */
 
 header {
@@ -110,12 +123,21 @@ h1 span {
     align-items: center;
 }
 
-.background-matrix ul {
-    margin: 4%;
+.icons {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    right: 3%;
+    top: 34%;
 }
 
-.background-matrix li {
+.icons li {
     margin: 30px 0;
+}
+
+a:hover {
+    cursor: pointer;
 }
 
 .texte-header {
@@ -206,19 +228,6 @@ h1 span {
 .top .gif4:hover {
     cursor: pointer;
     opacity: 1;
-}
-
-.hide {
-    display: none;
-}
-
-.mob {
-    display: none;
-}
-
-.min {
-    min-width: 100%;
-    overflow-x: hidden;
 }
 
 /* fin - HEADER */
@@ -328,7 +337,7 @@ h1 span {
 /* <!----------------------- La Hackeuse -----------------------> */
 
 .la-hackeuse {
-    border: 4px dashed #f1f1f1;
+    /* border: 4px dashed #f1f1f1; */
 
     grid-area: p1;
     /* position: absolute;
@@ -366,6 +375,7 @@ h1 span {
     height: 418px;
     width: 388px;
     align-self: center;
+    padding-right: 20px;
 }
 
 .cube {
@@ -381,7 +391,7 @@ h1 span {
 /* ------------------- Fascinante ------------------- */
 
 .fascinante {
-    border: 4px dashed #f1f1f1;
+    /* border: 4px dashed #f1f1f1; */
 
     grid-area: p2;
     /* margin: 60px 170px 0; */
@@ -413,7 +423,7 @@ h1 span {
 /* ------------------- CONCLUSION ------------------- */
 
 .conclusion {
-    border: 4px dashed #f1f1f1;
+    /* border: 4px dashed #f1f1f1; */
 
     grid-area: p3;
     /* margin: 60px 170px 0; */
@@ -422,6 +432,7 @@ h1 span {
     grid-template-columns: 1fr 65px 1fr;
     grid-template-areas: "ca ca ca" "cb cc cc";
     letter-spacing: 2px;
+    gap: 20px;
 }
 
 .conclusion .aaa {
@@ -433,6 +444,7 @@ h1 span {
     width: 430px;
     height: 430px;
     background: url(images/gif/riri.gif) no-repeat center/cover;
+    /* align-self: center; */
 }
 
 .conclusion .riri img {
@@ -724,7 +736,7 @@ footer {
         height: 360px;
     }
 
-    .background-matrix ul {
+    .icons ul {
         display: none;
     }
 

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hackeuse</title>
     <link rel="stylesheet" href="style.css">
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -16,6 +17,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="images/icon-signature.png" />
+    <!-- bootstrap -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
 </head>
 <body>
     <!--------------------- HEADER --------------------->
@@ -96,9 +99,15 @@
 
                 <img class="mob padding" src="images/gif/hackerman.gif" alt="gif hackerman">
 
-                <div class="video">
-                    <h3 class="breathe">Get ready to <br> be hacked!</h3>
-                </div>
+                    <div id="btnPopup" class="video">
+                        <a href=""></a><h3 class="breathe">Get ready to <br> be hacked!</h3></a>
+                    </div>
+                
+                <aside id="modal">
+                    <div id="window" class="modal-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/KEkrWRHCDQU?start=124" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </aside>
             </div>
         </section>
         <!----------------------- fin - INTRODUCTION ----------------------->
@@ -166,6 +175,10 @@
     </footer>
 
         <!----------------------- fin - FOOTER ----------------------->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
     <script src="script.js"></script>

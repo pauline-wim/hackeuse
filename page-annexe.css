@@ -42,5 +42,13 @@ main {
 .message p {
     margin: 40px;
     text-align: center;
-    font-size: 40px;
+    font-size: clamp(30px, 4vw, 40px);
+}
+
+@media (max-width: 500px) {
+    main {
+        overflow-x: hidden;
+        /* position: relative; */
+        grid-template-columns: 1fr;
+    }
 }

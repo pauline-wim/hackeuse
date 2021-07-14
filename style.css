@@ -836,12 +836,16 @@ footer {
     }
 
     /* -------------------- Menu Burger ----------------------- */
+    #root {
+        position: fixed;
+        overflow-x: hidden;
+    }
 
     #topnav_responsive_menu {
         display : block;
         position: absolute;
         right   : 0;
-        top     : 10%;
+        top     : 11%;
         margin  : 0;
         width   : 50vw;
         height  : 50vh;
@@ -883,6 +887,11 @@ footer {
     #topnav_responsive_menu li {
         font-size: 14px;
         padding: 5% 0;
+    }
+
+    .retour {
+        text-decoration: none;
+        color: blue;
     }
     /* -------------------- Menu Burger ----------------------- */
 }

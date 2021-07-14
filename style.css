@@ -19,6 +19,7 @@ body {
 /* LOADER */
 
 .loader {
+    overflow-x: hidden;
     position: absolute;
     z-index: 99;
     width: 100%;

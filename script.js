@@ -1,3 +1,15 @@
+// LOADER
+
+const loader = document.querySelector('.loader');
+
+window.addEventListener('load', () => {
+  loader.classList.add('fondu-out');
+})
+
+// fin - LOADER
+
+// ANIMATION TITRE 
+
 const titreSpans = document.querySelectorAll('h1 .seconde');
 const titreSpansFirst = document.querySelectorAll('h1 .first');
 // const btns = document.querySelectorAll('.btn-first');

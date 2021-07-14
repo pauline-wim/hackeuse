@@ -839,6 +839,7 @@ footer {
     #root {
         position: fixed;
         overflow-x: hidden;
+        color: blueviolet;
     }
 
     #topnav_responsive_menu {

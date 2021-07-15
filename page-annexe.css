@@ -22,6 +22,7 @@ h1 {
 
 .qui p {
     width: 60%;
+    margin: 40px;
 }
 
 img {
@@ -45,10 +46,38 @@ main {
     font-size: clamp(30px, 4vw, 40px);
 }
 
+.sources p {
+    width: 60%;
+    margin: 40px;
+}
+
+.back a {
+    text-decoration: none;
+    margin: 40px;
+}
+
+button:hover {
+    border: 2px groove blueviolet;
+    color: blueviolet;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 40px;
+    border-style: outset;
+    font-family: 'Oxanium', sans-serif;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
 @media (max-width: 500px) {
     main {
         overflow-x: hidden;
         /* position: relative; */
         grid-template-columns: 1fr;
+    }
+
+    .qui p, .sources p {
+        width: 80%;
     }
 }

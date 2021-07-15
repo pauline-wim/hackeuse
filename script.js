@@ -3,8 +3,14 @@
 const loader = document.querySelector('.loader');
 
 window.addEventListener('load', () => {
-  loader.classList.add('fondu-out');
+  loader.classList.add('fondu-out', 'hidden');
 })
+
+// window.addEventListener('Completed', hidden);
+
+// function hidden(){
+//   loader.style.display = 'none';
+// }
 
 // fin - LOADER
 

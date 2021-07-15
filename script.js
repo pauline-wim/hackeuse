@@ -99,4 +99,41 @@ function closeModal(){
   modal.style.display = 'none';
 }
 
+// PANDORA 
+
+var btn = document.getElementById('btn');
+var pandora = document.getElementById('pandora');
+var gify = document.getElementById('gifs');
+
+btn.addEventListener('click', open);
+pandora.addEventListener('click', close);
+gify.removeEventListener('click', close);
+
+function open(){
+  pandora.style.display = 'block';
+}
+
+function close(){
+  pandora.style.display = 'none';
+}
+
+// faire apparaitre les gifs graduellement...
+
+// const v1 = document.querySelectorAll('.v1');
+// const v2 = document.querySelectorAll('.v2');
+// const v3 = document.querySelectorAll('.v3');
+
+// pandora.addEventListener('load', () => {
+
+//   const TL = gsap.timeline({paused: true});
+
+//   TL.from(gify, 1, {transform: 'scale(0)', opacity: 0, ease: 'power2.out'}, 0.3);
+//   TL.from(v1, 1, {transform: 'scale(0)', opacity: 0, ease: 'string'}, 0.3);
+//   TL.from(v2, 1, {transform: 'scale(0)', ease: 'power2.out'});
+//   TL.from(v3, 0.4, {transform: 'scale(0)', ease: 'power2.out'});
+
+//   TL.play();
+
+// })
+
 

@@ -103,7 +103,7 @@ function closeModal(){
 
 var btn = document.getElementById('btn');
 var pandora = document.getElementById('pandora');
-var gify = document.getElementById('gifs');
+var gify = document.getElementById('gify');
 
 btn.addEventListener('click', open);
 pandora.addEventListener('click', close);
@@ -123,17 +123,16 @@ function close(){
 // const v2 = document.querySelectorAll('.v2');
 // const v3 = document.querySelectorAll('.v3');
 
-// pandora.addEventListener('load', () => {
+// gify.addEventListener('load', () => {
 
 //   const TL = gsap.timeline({paused: true});
 
-//   TL.from(gify, 1, {transform: 'scale(0)', opacity: 0, ease: 'power2.out'}, 0.3);
-//   TL.from(v1, 1, {transform: 'scale(0)', opacity: 0, ease: 'string'}, 0.3);
-//   TL.from(v2, 1, {transform: 'scale(0)', ease: 'power2.out'});
-//   TL.from(v3, 0.4, {transform: 'scale(0)', ease: 'power2.out'});
+//   TL.staggerFrom(v1, 1, {opacity: 0, ease: 'power2.out'}, 0.3);
+//   TL.staggerFrom(v2, 1, {opacity: 0, ease: 'power2.out'}, 0.3, '-=0.8');
+//   TL.staggerFrom(v3, 3, {opacity: 0, ease: 'power2.out'}, 0.3, '-=0.2');
 
 //   TL.play();
 
-// })
+// }) 
 
 
